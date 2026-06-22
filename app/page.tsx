@@ -1,65 +1,41 @@
-import Image from "next/image";
+"use client";
+import { useState } from "react";
+import AuthModal from "@/src/components/ui/AuthModal";
 
 export default function Home() {
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <AuthModal isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} />
+
+      <main className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-[url('/assets/background.png')] bg-cover bg-center">
+        
+        {/* Overlay limpo */}
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/90 to-transparent z-0 pointer-events-none"></div>
+
+        {/* Topbar: Botão "Entrar" removido, focando apenas na Logo */}
+        <header className="relative w-full p-6 flex justify-between items-center z-20">
+          <img 
+            src="/assets/logo-dkau-ai.png" 
+            alt="dKau.AI Logo" 
+            className="h-16 md:h-24 drop-shadow-[0_4px_12px_rgba(0,0,0,1)] cursor-pointer hover:scale-105 transition-transform duration-300"
+          />
+        </header>
+
+        {/* Área de Ação: Único Call to Action */}
+        <div className="relative z-10 w-full flex flex-col items-center justify-end px-4 mt-auto mb-16 md:mb-24">
+          <button 
+            onClick={() => setIsAuthOpen(true)}
+            className="group relative flex items-center justify-center px-16 py-5 font-black text-white text-3xl tracking-wide rounded-full overflow-hidden bg-gradient-to-r from-[#ffa726] to-[#e50914] shadow-[0_0_40px_rgba(229,9,20,0.6)] hover:shadow-[0_0_60px_rgba(229,9,20,0.9)] transition-all duration-300 hover:-translate-y-2 hover:scale-105"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+            <span className="relative z-10 flex items-center gap-3 drop-shadow-lg">
+              JOGAR AGORA <span className="text-4xl leading-none">›</span>
+            </span>
+          </button>
         </div>
       </main>
-    </div>
+    </>
   );
 }

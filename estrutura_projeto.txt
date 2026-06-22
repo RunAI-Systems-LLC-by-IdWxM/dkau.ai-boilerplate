@@ -1,0 +1,34 @@
+dkau.ai-boilerplate
+Ôö£ÔöÇÔöÇ app
+Ôöé   Ôö£ÔöÇÔöÇ favicon.ico
+Ôöé   Ôö£ÔöÇÔöÇ globals.css
+Ôöé   Ôö£ÔöÇÔöÇ layout.tsx
+Ôöé   ÔööÔöÇÔöÇ page.tsx
+Ôö£ÔöÇÔöÇ public
+Ôöé   Ôö£ÔöÇÔöÇ audio
+Ôöé   Ôö£ÔöÇÔöÇ models
+Ôöé   Ôö£ÔöÇÔöÇ textures
+Ôöé   Ôö£ÔöÇÔöÇ file.svg
+Ôöé   Ôö£ÔöÇÔöÇ globe.svg
+Ôöé   Ôö£ÔöÇÔöÇ vercel.svg
+Ôöé   ÔööÔöÇÔöÇ window.svg
+Ôö£ÔöÇÔöÇ src
+Ôöé   Ôö£ÔöÇÔöÇ components
+Ôöé   Ôöé   Ôö£ÔöÇÔöÇ game
+Ôöé   Ôöé   ÔööÔöÇÔöÇ ui
+Ôöé   Ôö£ÔöÇÔöÇ engine
+Ôöé   Ôöé   Ôö£ÔöÇÔöÇ core
+Ôöé   Ôöé   Ôö£ÔöÇÔöÇ entities
+Ôöé   Ôöé   Ôö£ÔöÇÔöÇ levels
+Ôöé   Ôöé   ÔööÔöÇÔöÇ physics
+Ôöé   ÔööÔöÇÔöÇ lib
+Ôö£ÔöÇÔöÇ AGENTS.md
+Ôö£ÔöÇÔöÇ CLAUDE.md
+Ôö£ÔöÇÔöÇ README.md
+Ôö£ÔöÇÔöÇ eslint.config.mjs
+Ôö£ÔöÇÔöÇ estrutura_projeto.txt
+Ôö£ÔöÇÔöÇ next.config.ts
+Ôö£ÔöÇÔöÇ package-lock.json
+Ôö£ÔöÇÔöÇ package.json
+Ôö£ÔöÇÔöÇ postcss.config.mjs
+ÔööÔöÇÔöÇ tsconfig.json
