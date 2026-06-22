@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Limpo para compatibilidade com a Cloudflare
+  // Arquivo limpo para garantir o build na Cloudflare
 };
 
 export default nextConfig;
